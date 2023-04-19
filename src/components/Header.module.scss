@@ -1,0 +1,20 @@
+.Header {
+  height: 300px;
+  background-color: #FCFCFC;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .Content {
+    text-align: left;
+    h1 {
+      font-size: 28px;
+      color: #D33133;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 800px;
+      line-height: 2;
+    }
+  }
+}

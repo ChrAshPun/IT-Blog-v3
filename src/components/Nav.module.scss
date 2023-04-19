@@ -1,0 +1,58 @@
+.Nav {
+  position: relative;
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
+  z-index: 1;
+  .MaxWidth {
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .NavLeftSection {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .Logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 30px;
+        li {
+          color: #D33133;
+          list-style-type: none;
+        }
+        li:first-child {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        li:last-child {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      .NavLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        li {
+          font-weight: 500;
+          color: #707070;
+          list-style-type: none;
+          cursor: pointer;
+        }
+        li:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.ArticleCompact {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  .BorderLine {
+    width: 100%;
+    height: 2px;
+    background-color: #d3d3d3;
+  }
+  .Article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    .Information {
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

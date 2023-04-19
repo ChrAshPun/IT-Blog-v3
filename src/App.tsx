@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from './components/Nav';
+import Header from './components/Header';
+import ArticleCompact from './components/ArticleCompact';
 
 function App() {
+  const article = {
+    title: 'title',
+    description: 'descrip',
+    category: 'Operating Systems',
+    imgSrc: 'src',
+    imgAlt: 'alt',
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>
+      <Header/>
+      <ArticleCompact props={article} />
     </div>
   );
 }
