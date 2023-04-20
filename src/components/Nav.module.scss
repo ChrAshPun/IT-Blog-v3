@@ -5,8 +5,28 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
-  z-index: 1;
+  z-index: 2;
+  .MobileLinks {
+    width: 100%;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
+    li {
+      color: #D33133;
+      padding: 10px;
+      list-style-type: none;
+      cursor: pointer;
+    }
+  }
   .MaxWidth {
     width: 1080px;
     display: flex;
@@ -25,9 +45,11 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin-right: 30px;
+        cursor: pointer;
         li {
           color: #D33133;
           list-style-type: none;
+          white-space: nowrap;
         }
         li:first-child {
           font-size: 20px;
@@ -38,6 +60,14 @@
           font-weight: 500;
         }
       }
+      .BarsIcon {
+        display: none;
+        width: 20px;
+        margin-right: 20px;
+        path {
+          fill: #D33133;
+        }
+      }
       .NavLinks {
         display: flex;
         flex-direction: row;
@@ -46,11 +76,48 @@
         li {
           font-weight: 500;
           color: #707070;
+          white-space: nowrap;
           list-style-type: none;
           cursor: pointer;
         }
         li:not(:last-child) {
           margin-right: 20px;
+        }
+      }
+      .NavArrow {
+        position: relative;
+        .NavArrowIcon {
+          display: none;
+          width: 16px;
+          margin-right: 20px;
+          cursor: pointer;
+          path {
+            fill: #707070;
+          }
+        }
+        .ArrowLinks {
+          position: absolute;
+          top: 2px;
+          left: 18px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          background-color: #fff;
+          padding: 10px 0;
+          border-radius: 4px;
+          box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
+          z-index: 3;
+          li {
+            width: 100%;
+            display: none;
+            color: #707070;
+            font-weight: 500;
+            padding: 5px 20px;
+            list-style-type: none;
+            white-space: nowrap;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -84,6 +151,143 @@
         min-width: 16px;
         path {
           fill: #656565;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .Nav {
+    .MaxWidth {
+      .NavLeftSection {
+        .NavLinks {
+          .Exchange {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .NavArrowIcon {
+            display: block;
+          }
+          .ArrowLinks {
+            .Exchange {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .Nav {
+    .MaxWidth {
+      .NavLeftSection {
+        .NavLinks {
+          .AD {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .ArrowLinks {
+            .AD {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .Nav {
+    .MaxWidth {
+      .NavLeftSection {
+        .NavLinks {
+          .Powerpoint {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .ArrowLinks {
+            .Powerpoint {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .Nav {
+    .MaxWidth {
+      .NavLeftSection {
+        .NavLinks {
+          .Outlook {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .ArrowLinks {
+            .Outlook {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .Nav {
+    .MaxWidth {
+      .NavLeftSection {
+        .NavLinks {
+          .Printers {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .ArrowLinks {
+            .Printers {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .Nav {
+    .MaxWidth {
+      .Logo {
+        margin-right: 20px;
+      }
+      .NavLeftSection {
+        .BarsIcon {
+          display: block;
+        }
+        .NavLinks {
+          .OS {
+            display: none;
+          }
+        }
+        .NavArrow {
+          display: none;
+        }
+      }
+      .SearchBar {
+        width: 180px;
+        input {
+            width: 126px;
         }
       }
     }
