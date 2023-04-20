@@ -52,9 +52,22 @@ function App() {
       imgSrc: require('./png/fileexplorerthispc.png'),
       imgAlt: "fileexplorerthispc.png",
     },
+    {
+      title: 'Error: \"You can\'t connect to the file share because it\'s not secure."',
+      objective: "Enable SMBv1",
+      description:
+      "SMBv1 is an old and insecure network file sharing protocol that is disabled on Windows 10 by default.",
+      instructions: [
+        "Open Control Panel",
+        "select Programs and Features",
+        "Check SMB 1.0 / CIFS File Sharing Support",
+      ],
+      category: "Operating Systems",
+      imgSrc: require('./png/smb1error.png'),
+      imgAlt: "smb1error",
+    },
     // PRINTERS articles
     {
-      category: "Printers",
       title: "My printer is randomly printing pages",
       objective: "Clear the Print Spooler",
       description:
@@ -65,8 +78,24 @@ function App() {
         "Next, navigate to C: \\Windows\\System32\\spool\\PRINTERS",
         "Delete all the files in that folder and restart the Print Spooler",
       ],
+      category: "Printers",
       imgSrc: require('./png/clearspooler.png'),
       imgAlt: "clearspooler.png",
+    },
+    {
+      title: "My printer is printing a crazy symbols!",
+      objective: "Install the latest driver",
+      description:
+      "If a printer is printing hieroglyphics it's usually a driver issue. Go to the manufacturer's website to install the latest driver. Every installation process is different. If you've installed the latest driver and the printer is still not printing correctly, make sure the printer is using the latest driver from the Control Panel.",
+      instructions: [
+        "Open Control Panel and select Devices and Printers",
+        "Right - click the printer and select Printer Properties",
+        "Click the Advanced tab",
+        "click on the Driver drop - down list and select the latest driver",
+      ],
+      category: "Printers",
+      imgSrc: require('./png/hieroglyphics.png'),
+      imgAlt: "hieroglyphics",
     },
     // OUTLOOK articles
     {
@@ -84,6 +113,37 @@ function App() {
       ],
       imgSrc: require('./png/setoffolders.png'),
       imgAlt: "setoffolders.png",
+    },
+    {
+      title: 'Error: "Library not registered."',
+      objective: "Make changes to the Windows Registry",
+      description:
+      "This error usually occurs after a upgrade. There may be an older key in the Windows Registry that needs to be deleted. Backup the key by saving it as an Export before making any changes to the Registry. ",
+      instructions: [
+        "Press Start, type regedit and click on Registry Editor",
+        "Nagivate to HKEY_CLASSES_ROOT\\Typelib\\0006F062 - 0000 - 0000 - C00 - 000000000046",
+        "Backup the folder before deleting it",
+        "Now try to open Outlook",
+        "If that doesn't work, try running an Office repair",
+      ],
+      category: "Outlook",
+      imgSrc: require('./png/librarynotregistered.png'),
+      imgAlt: "librarynotregistered",
+    },
+    {
+      title: 'Error: "Instant Search is not available when Outlook is running with administrator permissions."',
+      objective: "Uncheck “Run As Administrator” for Outlook.exe",
+      description:
+      "If Outlook Instant Search is not working properly, trying reconfiguring the Compatibility settings for Outlook.",
+      instructions: [
+        "For 32 - bit Windows go to C: \\Program Files\\Microsoft Office\\Office14\\",
+        "For 64 - bit Windows go to C: \\Program Files(x86)\\Microsoft Office\\Office14\\",
+        "Right - click OUTLOOK.EXE and select properties",
+        "Under the Compatibility tab, uncheck “Run As Administrator”",
+      ],
+      category: "Outlook",
+      imgSrc: require('./png/instantsearch.png'),
+      imgAlt: "instantsearch",
     },
     // POWERPOINT articles
     {
