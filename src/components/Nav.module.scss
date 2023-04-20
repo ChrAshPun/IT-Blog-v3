@@ -54,5 +54,38 @@
         }
       }
     }
+    .SearchBar {
+      width: 200px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eaeaea;
+      padding: 0 14px 0 18px;
+      border-radius: 16px;
+      input {
+        width: 146px;
+        margin-right: 10px;
+        background-color: transparent;
+        border: none;
+      }
+      input[type="text"]
+      {
+          font-family: 'Rubik';
+          font-size:14px;
+      }
+      // input::placeholder {
+      //   color: #808080;
+      // }
+      textarea:focus, input:focus{
+          outline: none;
+      }
+      .SearchIcon {
+        min-width: 16px;
+        path {
+          fill: #656565;
+        }
+      }
+    }
   }
 }

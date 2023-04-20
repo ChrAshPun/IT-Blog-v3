@@ -1,6 +1,20 @@
 import styles from './Nav.module.scss';
+import { ReactComponent as SearchIcon } from '../png/magnifying-glass-solid.svg';
 
-function Nav() {
+// interface IProps {
+//   handleClick: () => void
+// }
+
+// const Nav: React.FC<IProps> = ({ handleClick }) => {
+//   return (
+//     <li onClick={handleClick}>Operating Systems</li>
+//     ...
+
+interface IProps {
+  handleClick: (category: string) => void
+}
+
+const Nav: React.FC<IProps> = ({ handleClick }) => {
   return (
     <nav className={styles.Nav}>
       <div className={styles.MaxWidth}>
@@ -10,15 +24,18 @@ function Nav() {
             <li>by Christina Punla</li>
           </ul>
           <ul className={styles.NavLinks}>
-            <li>Operating Systems</li>
-            <li>Printers</li>
-            <li>Outlook</li>
-            <li>Powerpoint</li>
-            <li>Active Directory</li>
-            <li>Exchange</li>
+            <li onClick={() => handleClick('Operating Systems')}>Operating Systems</li>
+            <li onClick={() => handleClick('Printers')}>Printers</li>
+            <li onClick={() => handleClick('Outlook')}>Outlook</li>
+            <li onClick={() => handleClick('Powerpoint')}>Powerpoint</li>
+            <li onClick={() => handleClick('Active Directory')}>Active Directory</li>
+            <li onClick={() => handleClick('Exchange')}>Exchange</li>
           </ul>
         </div>
-          <div>searchbar</div>
+          <div className={styles.SearchBar}>
+            <input type="text" placeholder="Search"/>
+            <SearchIcon className={styles.SearchIcon}/>
+          </div>
       </div>
     </nav>
   );
