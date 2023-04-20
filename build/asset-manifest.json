@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.feeb04a7.css",
+    "main.js": "/static/js/main.88b3f49f.js",
+    "static/js/787.b805065b.chunk.js": "/static/js/787.b805065b.chunk.js",
+    "static/media/setoffolders.png": "/static/media/setoffolders.de5db0cfd9dcfa7f4208.png",
+    "static/media/unlockadaccount.png": "/static/media/unlockadaccount.51b1c5e05994ef2ec62c.png",
+    "static/media/protectedview2.png": "/static/media/protectedview2.476d19e68b53c1d72767.png",
+    "static/media/clearspooler.png": "/static/media/clearspooler.5db31a1cc9758bf853bf.png",
+    "static/media/winexplorertarget.png": "/static/media/winexplorertarget.94b3374f91144fac1a41.png",
+    "static/media/fileexplorerthispc.png": "/static/media/fileexplorerthispc.acd171b96865344739b2.png",
+    "static/media/mailboxquota.png": "/static/media/mailboxquota.8a1ecee31832ef3e3029.png",
+    "index.html": "/index.html",
+    "static/media/magnifying-glass-solid.svg": "/static/media/magnifying-glass-solid.819dbf4f84c4cdd2721389d558571a86.svg",
+    "main.feeb04a7.css.map": "/static/css/main.feeb04a7.css.map",
+    "main.88b3f49f.js.map": "/static/js/main.88b3f49f.js.map",
+    "787.b805065b.chunk.js.map": "/static/js/787.b805065b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.feeb04a7.css",
+    "static/js/main.88b3f49f.js"
+  ]
+}
