@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { BrowserRouter } from "react-router-dom";
 import styles from './App.module.scss';
 import Nav from './components/Nav';
 import Header from './components/Header';
@@ -152,17 +153,20 @@ function App() {
     return filterArticles(category)
   }, [category, articles]);
 
+  // install react-router-dom, update basename, and homepage in package.json
   return (
-    <div className="App">
+    <div className={styles.App}>
+      <BrowserRouter basename="/itblog"> 
       <Nav handleClick={handleClick}/>
-      <Header/>
-      { filteredArticles.map(article => {
-        return <>
-          <ArticleCompact props={article} />
-          <div className={styles.BorderLine}></div>
-        </>
-      })}
-    </div>
+        <Header/>
+        { filteredArticles.map((article, index) => {
+          return <>
+            <ArticleCompact props={article} key={index}/>
+            <div className={styles.BorderLine}></div>
+          </>
+        })}
+      </BrowserRouter>
+  </div>
   );
 }
 
