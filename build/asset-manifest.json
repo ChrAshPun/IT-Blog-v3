@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/itblog/static/css/main.6d424b15.css",
+    "main.css": "/itblog/static/css/main.0f3dde26.css",
     "main.js": "/itblog/static/js/main.283a787b.js",
     "static/js/787.b805065b.chunk.js": "/itblog/static/js/787.b805065b.chunk.js",
     "static/media/hieroglyphics.png": "/itblog/static/media/hieroglyphics.8b0826ec859c3df95aff.png",
@@ -23,12 +23,12 @@
     "static/media/bars-solid.svg": "/itblog/static/media/bars-solid.dd92aed316c5967acbf1f7094cd87de4.svg",
     "static/media/magnifying-glass-solid.svg": "/itblog/static/media/magnifying-glass-solid.819dbf4f84c4cdd2721389d558571a86.svg",
     "static/media/angle-down-solid.svg": "/itblog/static/media/angle-down-solid.b0ee6c7e43846a3ee68c0a7056f5b490.svg",
-    "main.6d424b15.css.map": "/itblog/static/css/main.6d424b15.css.map",
+    "main.0f3dde26.css.map": "/itblog/static/css/main.0f3dde26.css.map",
     "main.283a787b.js.map": "/itblog/static/js/main.283a787b.js.map",
     "787.b805065b.chunk.js.map": "/itblog/static/js/787.b805065b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d424b15.css",
+    "static/css/main.0f3dde26.css",
     "static/js/main.283a787b.js"
   ]
 }
