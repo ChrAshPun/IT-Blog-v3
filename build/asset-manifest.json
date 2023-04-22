@@ -1,34 +1,18 @@
 {
   "files": {
-    "main.css": "/itblog/static/css/main.0f3dde26.css",
-    "main.js": "/itblog/static/js/main.283a787b.js",
+    "main.css": "/itblog/static/css/main.00055df3.css",
+    "main.js": "/itblog/static/js/main.e12faddf.js",
     "static/js/787.b805065b.chunk.js": "/itblog/static/js/787.b805065b.chunk.js",
-    "static/media/hieroglyphics.png": "/itblog/static/media/hieroglyphics.8b0826ec859c3df95aff.png",
-    "static/media/printbyip.png": "/itblog/static/media/printbyip.2ffb439310affc788331.png",
-    "static/media/setoffolders.png": "/itblog/static/media/setoffolders.de5db0cfd9dcfa7f4208.png",
-    "static/media/unlockadaccount.png": "/itblog/static/media/unlockadaccount.51b1c5e05994ef2ec62c.png",
-    "static/media/protectedview2.png": "/itblog/static/media/protectedview2.476d19e68b53c1d72767.png",
-    "static/media/smb1error.png": "/itblog/static/media/smb1error.123324c3246b3ea1ab2a.png",
-    "static/media/instantsearch.png": "/itblog/static/media/instantsearch.00e5fc7ee07e8fe1aac4.png",
-    "static/media/librarynotregistered.png": "/itblog/static/media/librarynotregistered.ee0ae22a1894c73232dc.png",
-    "static/media/retention2.png": "/itblog/static/media/retention2.215e5f56907c8af38052.png",
-    "static/media/clearspooler.png": "/itblog/static/media/clearspooler.5db31a1cc9758bf853bf.png",
-    "static/media/winexplorertarget.png": "/itblog/static/media/winexplorertarget.94b3374f91144fac1a41.png",
-    "static/media/fileexplorerthispc.png": "/itblog/static/media/fileexplorerthispc.acd171b96865344739b2.png",
-    "static/media/mailboxquota.png": "/itblog/static/media/mailboxquota.8a1ecee31832ef3e3029.png",
-    "static/media/retention3.png": "/itblog/static/media/retention3.3667ba0d213c2d3d79b9.png",
-    "static/media/mapdrives.png": "/itblog/static/media/mapdrives.f4b61179ab0a1fdfa0c3.png",
-    "static/media/retention1.png": "/itblog/static/media/retention1.4703311af7aa15d31772.png",
     "index.html": "/itblog/index.html",
     "static/media/bars-solid.svg": "/itblog/static/media/bars-solid.dd92aed316c5967acbf1f7094cd87de4.svg",
     "static/media/magnifying-glass-solid.svg": "/itblog/static/media/magnifying-glass-solid.819dbf4f84c4cdd2721389d558571a86.svg",
     "static/media/angle-down-solid.svg": "/itblog/static/media/angle-down-solid.b0ee6c7e43846a3ee68c0a7056f5b490.svg",
-    "main.0f3dde26.css.map": "/itblog/static/css/main.0f3dde26.css.map",
-    "main.283a787b.js.map": "/itblog/static/js/main.283a787b.js.map",
+    "main.00055df3.css.map": "/itblog/static/css/main.00055df3.css.map",
+    "main.e12faddf.js.map": "/itblog/static/js/main.e12faddf.js.map",
     "787.b805065b.chunk.js.map": "/itblog/static/js/787.b805065b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f3dde26.css",
-    "static/js/main.283a787b.js"
+    "static/css/main.00055df3.css",
+    "static/js/main.e12faddf.js"
   ]
 }

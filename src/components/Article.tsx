@@ -9,8 +9,8 @@ interface IArticle {
 
 interface IInstructions {
   objective: string;
-  description: string;
-  list: string[];
+  overview: string;
+  steps: string[];
   imgSrc?: string;
   imgAlt?: string;
 }
@@ -27,22 +27,22 @@ const ArticleCompact: React.FC<IArticle> = ({
         <span className={styles.Category}>{ category }</span>
         <h1>{ title }</h1>
         <div className={styles.InnerBorderLine}></div>
-        { instructions.map((item) => {
-          return <>
+        { instructions.map((item, index) => {
+          return <div key={index}>
             <p className={styles.Objective}>{ item.objective }</p>
-            <p className={styles.Description}>{ item.description }</p>
+            <p className={styles.Description}>{ item.overview }</p>
             <ul className={styles.Instructions}>
-              { item.list.map((listItem) => {
-                return <li>{ listItem }</li>
+              { item.steps.map((listItem, index) => {
+                return <li key={index}>{ listItem }</li>
               }) }
             </ul>
             { item.imgSrc ? 
               <div className={styles.ImgContainer}>
-                <img src={ item.imgSrc } alt={ item.imgAlt }/>
+                <img src={process.env.PUBLIC_URL + item.imgSrc} alt={ item.imgAlt }/>
               </div>
               : null
             }
-          </>
+          </div>
         })}
       </div>
       <div className={styles.BottomBorderLine}></div>
