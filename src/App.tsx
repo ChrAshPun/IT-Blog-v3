@@ -1,24 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import { BrowserRouter } from "react-router-dom";
+import { IArticle } from "./interfaces"
 import styles from './App.module.scss';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Article from './components/Article';
-
-interface IArticle {
-  category: string;
-  title: string;
-  instructions: IInstructions[];
-  notes?: string[];
-}
-
-interface IInstructions {
-  objective: string;
-  overview: string;
-  steps: string[];
-  imgSrc?: string;
-  imgAlt?: string;
-}
 
 function App() {
   const [category, setCategory] = useState("");

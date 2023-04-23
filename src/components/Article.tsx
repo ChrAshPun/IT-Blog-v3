@@ -1,19 +1,5 @@
 import styles from './Article.module.scss';
-
-interface IArticle {
-  category: string;
-  title: string;
-  instructions: IInstructions[];
-  notes?: string[];
-}
-
-interface IInstructions {
-  objective: string;
-  overview: string;
-  steps: string[];
-  imgSrc?: string;
-  imgAlt?: string;
-}
+import { IArticle } from "../interfaces"
 
 const ArticleCompact: React.FC<IArticle> = ({ 
     category,

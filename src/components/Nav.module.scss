@@ -29,7 +29,7 @@
     }
   }
   .MaxWidth {
-    width: 1080px;
+    width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -84,11 +84,14 @@
         li:not(:last-child) {
           margin-right: 20px;
         }
+        .Exchange, .AD {
+          display: none;
+        }
       }
       .NavArrow {
         position: relative;
         .NavArrowIcon {
-          display: none;
+          display: block;
           width: 16px;
           margin-right: 20px;
           cursor: pointer;
@@ -119,6 +122,12 @@
             white-space: nowrap;
             cursor: pointer;
           }
+          li:hover {
+            background-color: #fafafa;
+          }
+          .Exchange, .AD {
+            display: block;
+          }
         }
       }
     }
@@ -142,9 +151,9 @@
           font-family: 'Rubik';
           font-size:14px;
       }
-      // input::placeholder {
-      //   color: #808080;
-      // }
+      input::placeholder {
+        color: #808080;
+      }
       textarea:focus, input:focus{
           outline: none;
       }
@@ -158,52 +167,7 @@
   }
 }
 
-@media (max-width: 1070px) {
-  .Nav {
-    .MaxWidth {
-      .NavLeftSection {
-        .NavLinks {
-          .Exchange {
-            display: none;
-          }
-        }
-        .NavArrow {
-          .NavArrowIcon {
-            display: block;
-          }
-          .ArrowLinks {
-            .Exchange {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 980px) {
-  .Nav {
-    .MaxWidth {
-      .NavLeftSection {
-        .NavLinks {
-          .AD {
-            display: none;
-          }
-        }
-        .NavArrow {
-          .ArrowLinks {
-            .AD {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   .Nav {
     .MaxWidth {
       .NavLeftSection {
@@ -224,7 +188,7 @@
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 760px) {
   .Nav {
     .MaxWidth {
       .NavLeftSection {
@@ -245,7 +209,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
   .Nav {
     .MaxWidth {
       .NavLeftSection {
@@ -266,7 +230,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .Nav {
     .MaxWidth {
       .Logo {

@@ -1,6 +1,6 @@
 .Article {
   width: 100%;
-  max-width: 1080px;
+  max-width: 900px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -15,9 +15,9 @@
     height: 100%;
     flex-grow: 1;
     h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 500;
-      margin: 15px auto 20px 0;
+      margin: 12px auto 18px 0;
     }
     .InnerBorderLine {
       width: 100%;
@@ -26,7 +26,7 @@
       margin: 0 auto 40px auto;
     }
     .Objective {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       margin-bottom: 5px;
     }
@@ -43,12 +43,9 @@
     }
     .Category {
       display: inline-block;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
-      color: #646464;
-      // background-color: #ededed;
-      // padding: 6px 14px;
-      // border-radius: 14px;
+      color: #808080;
     }
   }
   .ImgContainer {
@@ -67,11 +64,17 @@
     width: 100%;
     height: 1px;
     background-color: #dcdcdc;
-    margin: 0 auto 120px auto;
+    margin: 0 auto 100px auto;
   }
 }
 
 @media (max-width: 1120px) {
+  .Article {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 400px) {
   .Article {
     padding: 0 10px;
   }
