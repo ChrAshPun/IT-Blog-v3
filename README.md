@@ -1,8 +1,5 @@
 # IT-Blog-v3
-My Personal IT Blog
-
-### Webstack
-React/TypeScript/SCSS/Django/AWS
+My Personal IT Blog using React/TypeScript/SCSS/Django/AWS
 
 ## A list of objectives and best practices covered with this project
 
