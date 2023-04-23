@@ -41,7 +41,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/itarticles')
+    fetch('https://christinapunla.dev/api/itarticles/')
       .then(response => response.json())
       .then(json => setArticles(json))
       .catch(error => console.error(error));
