@@ -17,6 +17,7 @@ const Nav: React.FC<IProps> = ({ onHandleHeader, onHandleNavigation, onHandleSea
 
   const handleNavigation = (category: string) => {
     setShowMobileLinks(false);
+    setShowArrowLinks(false);
     onHandleNavigation(category);
   }
 
@@ -48,13 +49,13 @@ const Nav: React.FC<IProps> = ({ onHandleHeader, onHandleNavigation, onHandleSea
         </ul>
         : null
       }
-      <div className={styles.MaxWidth}>
-        <div className={styles.NavLeftSection}>
+      <div className={styles.NavLeftSection}>
           <BarsIcon className={styles.BarsIcon} onClick={toggleMobileLinks}/>
           <ul className={styles.Logo} onClick={() => onHandleHeader()}>
-            <li>IT Blog</li>
+            <li>Help Desk Guide</li>
             <li>by Christina Punla</li>
           </ul>
+          <div className={styles.Divider}></div>
           <ul className={styles.NavLinks}>
             <li className={styles.OS} onClick={() => handleNavigation('Operating Systems')}>Operating Systems</li>
             <li className={styles.Printers} onClick={() => handleNavigation('Printers')}>Printers</li>
@@ -77,11 +78,10 @@ const Nav: React.FC<IProps> = ({ onHandleHeader, onHandleNavigation, onHandleSea
             }
           </div>
       </div>
-          <div className={styles.SearchBar}>
-            <input type="text" placeholder="Search" value={input} onChange={(e) => setValue(e.target.value)} onKeyDown={(e) => handleKeyPress(e)}/>
-            <SearchIcon className={styles.SearchIcon} onClick={() => onHandleSearch(input)}/>
-          </div>
-      </div>
+      <div className={styles.SearchBar}>
+        <input type="text" value={input} onChange={(e) => setValue(e.target.value)} onKeyDown={(e) => handleKeyPress(e)}/>
+        <SearchIcon className={styles.SearchIcon} onClick={() => onHandleSearch(input)}/>
+      </div>   
     </nav>
   );
 }

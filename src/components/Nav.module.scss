@@ -1,166 +1,206 @@
 .Nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #D33133;
-  padding: 4px 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
+  background-color: #fff;
+  padding: 4px 30px;
+  border-bottom: solid 1px #d5d5d5;
   z-index: 2;
   .MobileLinks {
     width: 100%;
     position: absolute;
-    top: 49px;
+    top: 50px;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
     li {
+      width: 100%;
       font-weight: 500;
-      color: #D33133;
+      color: #404040;
       padding: 10px;
       list-style-type: none;
       cursor: pointer;
+      transition: all 200ms;
+    }
+    li:hover {
+      background-color: #f0f0f0;
     }
   }
-  .MaxWidth {
-    width: 900px;
+  .NavLeftSection {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin: 0 auto;
-    .NavLeftSection {
+    .Logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      cursor: pointer;
+      li {
+        font-family: 'Open Sans';
+        color: #414696;
+        list-style-type: none;
+        white-space: nowrap;
+      }
+      li:first-child {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      li:last-child {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+    .Divider {
+      height: 30px;
+      border-left: 1px solid #d3d3d3;
+      margin: 0 20px;
+    }
+    .BarsIcon {
+      display: none;
+      width: 20px;
+      margin-right: 20px;
+      path {
+        fill: #404040;
+      }
+    }
+    .NavLinks {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      .Logo {
+      li {
+        font-family: 'Avenir';
+        font-weight: 500;
+        color: #262626;
+        white-space: nowrap;
+        list-style-type: none;
+        cursor: pointer;
+      }
+      li:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    .NavArrow {
+      position: relative;
+      .NavArrowIcon {
+        display: none;
+        width: 16px;
+        margin-right: 20px;
+        cursor: pointer;
+        path {
+          fill: #262626;
+        }
+      }
+      .ArrowLinks {
+        position: absolute;
+        top: 2px;
+        left: 18px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-right: 30px;
-        cursor: pointer;
+        background-color: #fff;
+        padding: 10px 0;
+        border-radius: 4px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
+        z-index: 3;
         li {
-          color: #fff;
+          width: 100%;
+          display: none;
+          color: #262626;
+          font-family: 'Avenir';
+          font-weight: 500;
+          padding: 5px 20px;
           list-style-type: none;
           white-space: nowrap;
-        }
-        li:first-child {
-          font-size: 20px;
-          font-weight: 600;
-        }
-        li:last-child {
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
-      .BarsIcon {
-        display: none;
-        width: 20px;
-        margin-right: 20px;
-        path {
-          fill: #fff;
-        }
-      }
-      .NavLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        li {
-          font-weight: 500;
-          color: #fff;
-          white-space: nowrap;
-          list-style-type: none;
           cursor: pointer;
         }
-        li:not(:last-child) {
-          margin-right: 20px;
+        li:hover {
+          background-color: #fafafa;
         }
-        .Exchange, .AD {
+      }
+    }
+  }
+  .SearchBar {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 0 14px 0 18px;
+    border-radius: 16px;
+    input {
+      width: 146px;
+      margin-right: 10px;
+      background-color: transparent;
+      border: none;
+    }
+    input[type="text"]
+    {
+        font-family: 'Rubik';
+        font-size:14px;
+    }
+    input::placeholder {
+      color: #808080;
+    }
+    textarea:focus, input:focus{
+        outline: none;
+    }
+    .SearchIcon {
+      min-width: 16px;
+      path {
+        fill: #6c6c6c;
+      }
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .Nav {
+      .NavLeftSection {
+        .NavLinks {
+          .Exchange {
+            display: none;
+          }
+        }
+        .NavArrow {
+          .NavArrowIcon {
+            display: block;
+          }
+          .ArrowLinks {
+            .Exchange {
+              display: block;
+            }
+          }
+        }
+      }
+  }
+}
+
+@media (max-width: 1040px) {
+  .Nav {
+    .NavLeftSection {
+      .NavLinks {
+        .AD {
           display: none;
         }
       }
       .NavArrow {
-        position: relative;
-        .NavArrowIcon {
-          display: block;
-          width: 16px;
-          margin-right: 20px;
-          cursor: pointer;
-          path {
-            fill: #fff;
-          }
-        }
         .ArrowLinks {
-          position: absolute;
-          top: 2px;
-          left: 18px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          background-color: #fff;
-          padding: 10px 0;
-          border-radius: 4px;
-          box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.17);
-          z-index: 3;
-          li {
-            width: 100%;
-            display: none;
-            color: #D33133;
-            font-weight: 500;
-            padding: 5px 20px;
-            list-style-type: none;
-            white-space: nowrap;
-            cursor: pointer;
-          }
-          li:hover {
-            background-color: #fafafa;
-          }
-          .Exchange, .AD {
+          .AD {
             display: block;
           }
-        }
-      }
-    }
-    .SearchBar {
-      width: 200px;
-      height: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fafafa;
-      padding: 0 14px 0 18px;
-      border-radius: 16px;
-      input {
-        width: 146px;
-        margin-right: 10px;
-        background-color: transparent;
-        border: none;
-      }
-      input[type="text"]
-      {
-          font-family: 'Rubik';
-          font-size:14px;
-      }
-      input::placeholder {
-        color: #808080;
-      }
-      textarea:focus, input:focus{
-          outline: none;
-      }
-      .SearchIcon {
-        min-width: 16px;
-        path {
-          fill: #6c6c6c;
         }
       }
     }
@@ -169,91 +209,95 @@
 
 @media (max-width: 900px) {
   .Nav {
-    .MaxWidth {
-      .NavLeftSection {
-        .NavLinks {
-          .Powerpoint {
-            display: none;
-          }
-        }
-        .NavArrow {
-          .ArrowLinks {
-            .Powerpoint {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 760px) {
-  .Nav {
-    .MaxWidth {
-      .NavLeftSection {
-        .NavLinks {
-          .Outlook {
-            display: none;
-          }
-        }
-        .NavArrow {
-          .ArrowLinks {
-            .Outlook {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 680px) {
-  .Nav {
-    .MaxWidth {
-      .NavLeftSection {
-        .NavLinks {
-          .Printers {
-            display: none;
-          }
-        }
-        .NavArrow {
-          .ArrowLinks {
-            .Printers {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .Nav {
-    .MaxWidth {
-      .Logo {
-        margin-right: 20px;
-      }
-      .NavLeftSection {
-        .BarsIcon {
-          display: block;
-        }
-        .NavLinks {
-          .OS {
-            display: none;
-          }
-        }
-        .NavArrow {
+    .NavLeftSection {
+      .NavLinks {
+        .Powerpoint {
           display: none;
         }
       }
-      .SearchBar {
-        width: 180px;
-        input {
-            width: 126px;
+      .NavArrow {
+        .ArrowLinks {
+          .Powerpoint {
+            display: block;
+          }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .Nav {
+    .NavLeftSection {
+      .NavLinks {
+        .Outlook {
+          display: none;
+        }
+      }
+      .NavArrow {
+        .ArrowLinks {
+          .Outlook {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+} 
+
+@media (max-width: 730px) {
+  .Nav {
+    padding: 4px 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .Nav {
+    .NavLeftSection {
+      .NavLinks {
+        .Printers {
+          display: none;
+        }
+      }
+      .NavArrow {
+        .ArrowLinks {
+          .Printers {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Nav {
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .Nav {
+    .NavLeftSection {
+      .BarsIcon {
+        display: block;
+      }
+      .Divider {
+        display: none;
+      }
+      .NavLinks {
+        .OS {
+          display: none;
+        }
+      }
+      .NavArrow {
+        display: none;
+      }
+    }
+    .SearchBar {
+      width: 175px;
+      input {
+          width: 126px;
       }
     }
   }

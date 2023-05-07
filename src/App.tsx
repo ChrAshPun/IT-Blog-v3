@@ -5,6 +5,7 @@ import styles from './App.module.scss';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Article from './components/Article';
+import FailedSearch from './components/FailedSearch';
 
 function App() {
   const [category, setCategory] = useState("");
@@ -49,6 +50,7 @@ function App() {
         return articles
       }
     }
+
     return filterArticles(category)
   }, [category, search, articles]);
 
@@ -56,16 +58,29 @@ function App() {
   return (
     <BrowserRouter basename="/itblog"> 
       <div className={styles.App}>
-        <Nav onHandleHeader={handleHeader} onHandleNavigation={handleNavigation} onHandleSearch={handleSearch}/>
-        { category || search ? <div className={styles.Spacer}></div> : <Header/> }
-        { filteredArticles.map((article, index) => {
-          return <>
-            <Article
-              key={index}
-              {...article} // spread syntax
-              />
-          </>
-        })}
+        <Nav 
+          onHandleHeader={handleHeader} 
+          onHandleNavigation={handleNavigation} 
+          onHandleSearch={handleSearch}
+        />
+        { category || search ? 
+          <div className={styles.Spacer}></div> 
+          : <Header numArticles={articles.length} /> 
+        }
+        {filteredArticles.length > 0 ? 
+          (
+            <>
+              {filteredArticles.map((article, index) => (
+                <Article
+                  key={index}
+                  {...article} // spread syntax
+                />
+              ))}
+            </>
+          ) : (
+            <FailedSearch />
+          )
+        }
       </div>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 .Article {
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,16 +8,29 @@
   align-items: flex-start;
   margin: 0 auto;
   p {
+    font-family: 'Avenir';
     line-height: 1.6;
   }
   .Information {
     width: 100%;
     height: 100%;
     flex-grow: 1;
-    h1 {
-      font-size: 24px;
-      font-weight: 500;
-      margin: 10px auto 16px 0;
+    .Title {
+      position: relative;
+      .IndicatorLine {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 4px;
+        height: 34px;
+        background-color: #5559A0;
+      }
+      h1 {
+        font-family: 'Open Sans';
+        font-size: 24px;
+        font-weight: 600;
+        margin: 4px auto 8px 0;
+      }
     }
     .InnerBorderLine {
       width: 100%;
@@ -27,25 +40,26 @@
     }
     .Objective {
       font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 5px;
+      font-weight: 600;
     }
     .Description {
-      font-size: 16px;
+      font-size: 18px;
     }
     .Instructions {
       margin: 0 0 0 50px;
       li {
-        font-size: 16px;
+        font-family: 'Avenir';
+        font-size: 18px;
         list-style-type: "- ";
-        margin: 10px 0;
+        margin: 4px 0;
       }
     }
     .Category {
       display: inline-block;
-      font-size: 14px;
+      font-family: 'Avenir';
+      font-size: 16px;
       font-weight: 400;
-      color: #808080;
+      color: #707070;
     }
   }
   .ImgContainer {
@@ -57,14 +71,14 @@
     padding: 10px;
     border: 1px solid #dcdcdc;
     border-radius: 4px;
-    margin: 40px auto;
+    margin: 36px auto 40px auto;
     overflow: hidden;
   }
   .BottomBorderLine {
     width: 100%;
     height: 1px;
     background-color: #dcdcdc;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 80px auto;
   }
 }
 
@@ -74,8 +88,29 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 750px) {
+  .Article {
+    .Information {
+      .Title {
+        .IndicatorLine {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
   .Article {
     padding: 0 10px;
+    div {
+      .ImgContainer {
+        img {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    }
   }
 }

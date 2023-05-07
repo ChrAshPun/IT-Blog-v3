@@ -11,8 +11,10 @@ const ArticleCompact: React.FC<IArticle> = ({
     <div className={styles.Article}>
       <div className={styles.Information}>
         <span className={styles.Category}>{ category }</span>
-        <h1>{ title }</h1>
-        <div className={styles.InnerBorderLine}></div>
+        <div className={styles.Title}>
+          <div className={styles.IndicatorLine}></div>
+          <h1>{ title }</h1>
+        </div>
         { instructions.map((item, index) => {
           return <div key={index}>
             <p className={styles.Objective}>{ item.objective }</p>
