@@ -1,5 +1,5 @@
-# Help-Desk-Guide
-My Personal IT Blog that documents technical problems I resolved throughout my IT career.
+# Help-Desk-Technician-Guide
+My personal IT Blog that documents technical problems I resolved throughout my IT career.
 web stack: React/TypeScript/SCSS/Django/AWS
 
 ## A list of objectives and React best practices covered with this project
