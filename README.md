@@ -1,7 +1,8 @@
-# IT-Blog-v3
-My Personal IT Blog using React/TypeScript/SCSS/Django/AWS
+# Help-Desk-Guide
+My Personal IT Blog that documents technical problems I resolved throughout my IT career.
+web stack: React/TypeScript/SCSS/Django/AWS
 
-## A list of objectives and best practices covered with this project
+## A list of objectives and React best practices covered with this project
 
 ### 1. Try to use useMemo over useEffect to minimize unnecessary re-renders
 `useMemo(calculateValue, dependencies)` a function that returns a cached value as long as it's dependencies do not change. An optimization technique that stores the results of expensive function calls and returns the cached result.
