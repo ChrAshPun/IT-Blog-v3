@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter } from "react-router-dom";
 import { IArticle } from "./interfaces"
 import styles from './App.module.scss';
@@ -20,6 +20,7 @@ function App() {
   const handleNavigation = (category: string) => {
     setSearch("");
     setCategory(category);
+    window.scrollTo(0, 0);
   }
 
   const handleSearch = (search: string) => {
@@ -69,14 +70,7 @@ function App() {
         }
         {filteredArticles.length > 0 ? 
           (
-            <>
-              {filteredArticles.map((article, index) => (
-                <Article
-                  key={index}
-                  {...article} // spread syntax
-                />
-              ))}
-            </>
+            <>{filteredArticles.map((article, index) => (<Article key={index} {...article} />))}</>
           ) : (
             <FailedSearch />
           )

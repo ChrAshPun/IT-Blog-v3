@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/itblog/static/css/main.3e093b91.css",
-    "main.js": "/itblog/static/js/main.f94c6601.js",
-    "static/js/787.b805065b.chunk.js": "/itblog/static/js/787.b805065b.chunk.js",
+    "main.js": "/itblog/static/js/main.99d6d85b.js",
+    "static/js/787.d30f6ff4.chunk.js": "/itblog/static/js/787.d30f6ff4.chunk.js",
     "index.html": "/itblog/index.html",
     "static/media/bars-solid.svg": "/itblog/static/media/bars-solid.dd92aed316c5967acbf1f7094cd87de4.svg",
     "static/media/magnifying-glass-solid.svg": "/itblog/static/media/magnifying-glass-solid.819dbf4f84c4cdd2721389d558571a86.svg",
     "static/media/angle-down-solid.svg": "/itblog/static/media/angle-down-solid.b0ee6c7e43846a3ee68c0a7056f5b490.svg",
     "main.3e093b91.css.map": "/itblog/static/css/main.3e093b91.css.map",
-    "main.f94c6601.js.map": "/itblog/static/js/main.f94c6601.js.map",
-    "787.b805065b.chunk.js.map": "/itblog/static/js/787.b805065b.chunk.js.map"
+    "main.99d6d85b.js.map": "/itblog/static/js/main.99d6d85b.js.map",
+    "787.d30f6ff4.chunk.js.map": "/itblog/static/js/787.d30f6ff4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3e093b91.css",
-    "static/js/main.f94c6601.js"
+    "static/js/main.99d6d85b.js"
   ]
 }

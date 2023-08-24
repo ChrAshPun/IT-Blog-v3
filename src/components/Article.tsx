@@ -1,12 +1,8 @@
+import React from 'react';
 import styles from './Article.module.scss';
 import { IArticle } from "../interfaces"
 
-const ArticleCompact: React.FC<IArticle> = ({ 
-    category,
-    title, 
-    instructions,
-    notes, 
-  }) => {
+const ArticleCompact: React.FC<IArticle> = ({ category, title, instructions })  => {
   return (
     <div className={styles.Article}>
       <div className={styles.Information}>
